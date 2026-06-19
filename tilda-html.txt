@@ -1,0 +1,453 @@
+﻿
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner zv-c">
+      <a href="#" class="nav__logo">
+        <img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/logo-zavyaz.jpg" alt="ЗАВЯЗЬ" />
+        <span>ЗАВЯЗЬ</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#private">Частным клиентам</a></li>
+        <li><a href="#designers">Дизайнерам, брендам и фабрикам</a></li>
+        <li><a href="#retail">Магазинам</a></li>
+        <li><a href="#news">Новости</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content zv-c">
+      <h1 class="hero__title">Трикотаж, созданный<br>специально для вас</h1>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="zv-c">
+      <div class="about__grid">
+        <div class="about__image">
+          <img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/ira-greeting.png" alt="ЗАВЯЗЬ" />
+        </div>
+        <div class="about__text">
+          <p class="section__label">О нас</p>
+          <h2 class="section__title">Вяжем на заказ с 2020 года</h2>
+          <p>ЗАВЯЗЬ — ателье вязаного трикотажа под руководством дизайнера Ирины Кукушиной. Мы создаём качественные вязаные изделия по индивидуальным меркам. Работаем с частными клиентами, дизайнерами, брендами и производствами.</p>
+          <p>Каждый проект ведётся от идеи до готового изделия: подбор пряжи, разработка дизайна, вязание, контроль качества. 6 лет опыта и сотни довольных клиентов.</p>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__num" data-count="1000">0</span>
+              <span class="stat__label">свыше 1000 изделий</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="200">0</span>
+              <span class="stat__label">Довольных клиентов</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="6">0</span>
+              <span class="stat__label">Лет успешной работы</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVATE CLIENTS -->
+  <section class="section private" id="private">
+    <div class="zv-c">
+      <div class="section__header">
+        <p class="section__label">Частным клиентам</p>
+        <h2 class="section__title">Вязание на заказ от <span style="font-family:'Montserrat',sans-serif">1</span> изделия</h2>
+        <p class="section__subtitle">Создаём качественные вещи по вашим меркам и с учётом всех пожеланий. От идеи до готового изделия, которое вы будете носить с удовольствием.</p>
+      </div>
+      <div class="private__grid">
+        <div class="private-card">
+          <div class="private-card__num">01</div>
+          <h3>Консультация и выбор пряжи</h3>
+          <p>Поможем подобрать материалы под ваш запрос.</p>
+        </div>
+        <div class="private-card">
+          <div class="private-card__num">02</div>
+          <h3>Разработка дизайна</h3>
+          <p>Создаём уникальный дизайн по вашим референсам с учётом особенностей фигуры и актуальных трендов.</p>
+        </div>
+        <div class="private-card">
+          <div class="private-card__num">03</div>
+          <h3>Вязание по индивидуальным меркам</h3>
+          <p>После утверждения образца вяжем изделие с идеальной посадкой: свитеры, кардиганы, платья, пальто, комплекты.</p>
+        </div>
+        <div class="private-card">
+          <div class="private-card__num">04</div>
+          <h3>Доработка и финальная отделка</h3>
+          <p>Каждое изделие проходит контроль качества. Вносим правки до тех пор, пока вы не будете полностью довольны.</p>
+        </div>
+      </div>
+      <div class="private__cta">
+        <a href="#contact" class="btn btn--primary btn--large">Заказать вязание</a>
+      </div>
+    </div>
+
+    <!-- Portfolio inside Private -->
+    <div class="portfolio" style="margin-top:80px">
+      <div class="zv-c">
+        <div class="section__header">
+          <p class="section__label">Портфолио</p>
+          <h2 class="section__title">Наши работы</h2>
+        </div>
+      </div>
+      <div class="portfolio__grid" id="portfolioGrid">
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-15.png" alt="Свитер" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-8.jpg" alt="Платье" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-9.jpg" alt="Кардиган" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-4.png" alt="Джемпер" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-5.png" alt="Пальто" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-10.png" alt="Свитер с узором" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-6.png" alt="Комплект" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-12.jpg" alt="Аксессуары" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-7.png" alt="Шарф" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-14.png" alt="Плед" loading="lazy" /></div>
+        <div class="portfolio__item"><img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/kb-img-3.png" alt="Кардиган ажурный" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIGNERS -->
+  <section class="section audience" id="designers">
+    <div class="zv-c">
+      <div class="section__header">
+        <p class="section__label">Дизайнерам, брендам и фабрикам</p>
+        <h2 class="section__title">От эскиза до готовой коллекции</h2>
+        <p class="section__subtitle">Помогаем дизайнерам одежды, владельцам брендов и вязальным фабрикам: от подбора пряжи и вязания образцов до программирования оборудования и изготовления элементов.</p>
+      </div>
+      <div class="audience__grid" style="justify-content:center;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>Вязание образцов и тестирование пряжи</h3>
+          <p>Вяжем от 1 образца до серии. Тестируем пряжу и переплетения на промышленных машинах. Подбираем оптимальные материалы под ваш дизайн и бюджет.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <h3>Консультации по трикотажным технологиям</h3>
+          <p>Делимся экспертизой: какие переплетения подходят под конкретный дизайн, какую пряжу выбрать, как избежать типичных ошибок при запуске трикотажной коллекции.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Изготовление элементов для последующей сборки</h3>
+          <p>Вяжем отдельные детали и элементы изделий для дизайнеров и брендов, которые выполняют сборку самостоятельно. Точное исполнение по вашим лекалам и спецификациям.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          </div>
+          <h3>Консультирование и программирование вязальной машины CIXING</h3>
+          <p>Помогаем с настройкой и программированием вязального оборудования под конкретное изделие. Консультации по техническим параметрам: плотность, переплетения, раппорт узора.</p>
+        </div>
+      </div>
+      <div class="audience__cta">
+        <a href="#contact" class="btn btn--primary">Обсудить проект</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETAIL & MARKETPLACES -->
+  <section class="section audience audience--alt" id="retail">
+    <div class="zv-c">
+      <div class="section__header">
+        <p class="section__label">Магазинам и маркетплейсам</p>
+        <h2 class="section__title">Готовый трикотаж для вашего ассортимента</h2>
+        <p class="section__subtitle">Создаём вязаные коллекции для розничных магазинов и онлайн-площадок. От 1 модели до полноценной капсулы под ваш прайс-сегмент.</p>
+      </div>
+      <div class="audience__grid">
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          </div>
+          <h3>Трикотаж под вашим брендом</h3>
+          <p>Разрабатываем и вяжем коллекции трикотажной одежды для магазинов и маркетплейсов. Полный цикл: дизайн, подбор пряжи, вязание, упаковка.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>Гибкие тиражи: от 1 до 100+ изделий</h3>
+          <p>Вяжем как единичные модели для тестирования спроса, так и полноценные партии для сезонных коллекций и стоков маркетплейсов.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Гарантия качества и сроков</h3>
+          <p>Работаем официально в рамках договорённостей. Каждое изделие проходит контроль качества. Соблюдаем оговорённые сроки поставки.</p>
+        </div>
+      </div>
+      <div class="audience__cta">
+        <a href="#contact" class="btn btn--primary">Обсудить поставку</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="section news" id="news">
+    <div class="zv-c">
+      <div class="section__header">
+        <p class="section__label">Новости</p>
+        <h2 class="section__title">Трикотажная мода</h2>
+        <p class="section__subtitle">Последние новости о трикотаже из российских источников. <span style="color:#7b4b3a;font-size:0.75rem;display:block;margin-top:4px">Обновление ежедневно в 24:00 (МСК)</span></p>
+      </div>
+      <div class="news__list">
+        <div class="news-item">
+          <span class="news-item__date">19.06.2026</span>
+          <h3>Тренды лета 2026: трикотаж в центре внимания</h3>
+          <p>Ажурные платья и лёгкие кардиганы ручной вязки становятся главным выбором сезона. Российские дизайнеры делают ставку на натуральные материалы.</p>
+          <a href="https://moda247.ru" target="_blank" class="news-item__link">Источник: Мода 24/7</a>
+        </div>
+        <div class="news-item">
+          <span class="news-item__date">16.06.2026</span>
+          <h3>Российские фабрики наращивают выпуск трикотажной пряжи</h3>
+          <p>По данным Минпромторга, производство пряжи для трикотажа в РФ выросло на 18% за первое полугодие 2026 года.</p>
+          <a href="https://ria.ru" target="_blank" class="news-item__link">Источник: РИА Новости</a>
+        </div>
+        <div class="news-item">
+          <span class="news-item__date">12.06.2026</span>
+          <h3>Московская неделя моды: трикотажные коллекции российских брендов</h3>
+          <p>На Moscow Fashion Week 2026 более 30% показов включали трикотажные изделия. Объёмные свитеры и фактурные кардиганы — главные хиты.</p>
+          <a href="https://moda247.ru" target="_blank" class="news-item__link">Источник: Мода 24/7</a>
+        </div>
+        <div class="news-item">
+          <span class="news-item__date">08.06.2026</span>
+          <h3>Машинное вязание на дому: новый тренд среди российских дизайнеров</h3>
+          <p>Всё больше российских дизайнеров приобретают бытовые вязальные машины для создания авторских коллекций малых тиражей.</p>
+          <a href="https://www.intermoda.ru" target="_blank" class="news-item__link">Источник: InterModa</a>
+        </div>
+        <div class="news-item">
+          <span class="news-item__date">03.06.2026</span>
+          <h3>Экспорт российского трикотажа: рост на 22%</h3>
+          <p>Российские производители трикотажа увеличили экспорт в страны СНГ и Азии. Качество и цена делают российский трикотаж конкурентоспособным.</p>
+          <a href="https://ria.ru" target="_blank" class="news-item__link">Источник: РИА Новости</a>
+        </div>
+        <div class="news-item">
+          <span class="news-item__date">28.05.2026</span>
+          <h3>Натуральные волокна возвращаются: шерсть, хлопок и лён в тренде</h3>
+          <p>Потребители всё чаще выбирают трикотаж из натуральных материалов. Российские ателье отмечают рост спроса на изделия из мериноса и кашемира.</p>
+          <a href="https://moda247.ru" target="_blank" class="news-item__link">Источник: Мода 24/7</a>
+        </div>
+        <div class="news-item">
+          <span class="news-item__date">22.05.2026</span>
+          <h3>Вязаные аксессуары: must-have сезона весна-лето 2026</h3>
+          <p>Сумки, шляпы и даже обувь из трикотажного полотна завоёвывают российские подиумы и стрит-стайл.</p>
+          <a href="https://moda247.ru" target="_blank" class="news-item__link">Источник: Мода 24/7</a>
+        </div>
+        <div class="news-item">
+          <span class="news-item__date">15.05.2026</span>
+          <h3>Господдержка лёгкой промышленности: субсидии для трикотажных производств</h3>
+          <p>Минпромторг РФ объявил о расширении программы субсидирования предприятий лёгкой промышленности, включая трикотажные фабрики и ателье.</p>
+          <a href="https://ria.ru" target="_blank" class="news-item__link">Источник: РИА Новости</a>
+        </div>
+        <div class="news-item">
+          <span class="news-item__date">08.05.2026</span>
+          <h3>Как выбрать пряжу для летнего трикотажа: советы экспертов</h3>
+          <p>Эксперты рекомендуют обратить внимание на лён, рами и тенсель для летних вязаных изделий. Эти материалы обеспечивают комфорт в жаркую погоду.</p>
+          <a href="https://www.intermoda.ru" target="_blank" class="news-item__link">Источник: InterModa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" id="reviews">
+    <div class="zv-c">
+      <div class="section__header">
+        <p class="section__label">Отзывы</p>
+        <h2 class="section__title">Что говорят клиенты</h2>
+      </div>
+      <div class="reviews__slider" id="reviewsContainer">
+      </div>
+      <div class="review-form" id="reviewForm">
+        <h3>Оставить отзыв</h3>
+        <p class="review-form__note">Отзыв публикуется анонимно. Персональные данные не собираются.</p>
+        <div class="review-form__stars" id="starRating">
+          <span data-star="1">☆</span>
+          <span data-star="2">☆</span>
+          <span data-star="3">☆</span>
+          <span data-star="4">☆</span>
+          <span data-star="5">☆</span>
+        </div>
+        <input type="hidden" id="reviewStars" value="0" />
+        <textarea id="reviewText" rows="3" placeholder="Поделитесь впечатлением о нашей работе..."></textarea>
+        <button type="button" class="btn btn--primary" id="submitReview">Отправить отзыв</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="zv-c">
+      <div class="contact__inner">
+        <p class="section__label" style="text-align:center">Контакты</p>
+        <h2 class="section__title" style="text-align:center">Свяжитесь с дизайнером Ириной</h2>
+        <p style="text-align:center;color:#666;margin-bottom:48px;max-width:560px;margin-left:auto;margin-right:auto">Обсудим ваш проект, подберём материалы и найдём лучшее решение — будь то одно изделие или запуск коллекции.</p>
+        <div class="contact__cards">
+          <a href="https://t.me/knitwearguru_bot" target="_blank" class="contact-card">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.938z"/></svg>
+            <span>Трикотажный Гуру</span>
+          </a>
+          <a href="tel:+79222019199" class="contact-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+7 922 20 19 19 9</span>
+          </a>
+          <a href="https://max.ru/@id660600786359_bot" target="_blank" class="contact-card">
+            <img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/max-icon.png" alt="MAX" style="width:28px;height:28px" />
+            <span>Трикотажный Гуру</span>
+          </a>
+        </div>
+        <p style="text-align:center;color:#888;margin-top:32px;font-size:0.8rem">ИП Кукушина Ирина Анатольевна</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="zv-c">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="https://cdn.jsdelivr.net/gh/vakukushin-a11y/zavyaz-site@main/logo-zavyaz.jpg" alt="ЗАВЯЗЬ" />
+          <p style="text-align:center">Эксперт вязаного трикотажа<br>Индивидуальное вязание и консультации<br>Запуск коллекций для брендов и фабрик</p>
+        </div>
+        <div class="footer__col">
+          <h4>Кому мы помогаем</h4>
+          <ul>
+            <li><a href="#private">Частным клиентам</a></li>
+        <li><a href="#designers">Дизайнерам, брендам и фабрикам</a></li>
+            <li><a href="#retail">Магазинам и маркетплейсам</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#private">Портфолио</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Контакты</h4>
+          <ul class="footer__contacts">
+            <li>+7 922 20 19 19 9</li>
+            <li>Трикотажный Гуру — Telegram-бот</li>
+            <li>Трикотажный Гуру — MAX-бот</li>
+            <li>Дизайнер Ирина</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 ЗАВЯЗЬ — Вязаный трикотаж. ИП Кукушина Ирина Анатольевна.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 80);
+    });
+
+    const toggle = document.querySelector('.nav__toggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+
+    const counters = document.querySelectorAll('.stat__num');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.count);
+          let current = 0;
+          const step = Math.ceil(target / 40);
+          const interval = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(interval); }
+            el.textContent = current;
+          }, 40);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => observer.observe(c));
+
+    const toast = document.getElementById('toast');
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // Star rating
+    const stars = document.querySelectorAll('#starRating span');
+    const starInput = document.getElementById('reviewStars');
+    let currentRating = 0;
+    stars.forEach(star => {
+      star.addEventListener('mouseover', () => {
+        const val = parseInt(star.dataset.star);
+        stars.forEach((s, i) => s.textContent = i < val ? '★' : '☆');
+      });
+      star.addEventListener('click', () => {
+        currentRating = parseInt(star.dataset.star);
+        starInput.value = currentRating;
+        stars.forEach((s, i) => s.classList.toggle('active', i < currentRating));
+      });
+    });
+    document.getElementById('starRating').addEventListener('mouseleave', () => {
+      stars.forEach((s, i) => {
+        s.textContent = i < currentRating ? '★' : '☆';
+      });
+    });
+
+    // Submit review
+    const reviewsContainer = document.getElementById('reviewsContainer');
+    document.getElementById('submitReview').addEventListener('click', () => {
+      const text = document.getElementById('reviewText').value.trim();
+      const rating = parseInt(starInput.value);
+      if (!text) { showToast('Напишите текст отзыва'); return; }
+      if (rating < 1) { showToast('Поставьте оценку'); return; }
+      
+      const card = document.createElement('div');
+      card.className = 'review-card';
+      card.innerHTML = `
+        <div class="review-card__stars">${'★'.repeat(rating)}${'☆'.repeat(5-rating)}</div>
+        <p class="review-card__text">«${text}»</p>
+        <div class="review-card__author"><strong>Аноним</strong><span>Только что</span></div>
+      `;
+      reviewsContainer.prepend(card);
+      document.getElementById('reviewText').value = '';
+      starInput.value = '0';
+      currentRating = 0;
+      stars.forEach((s, i) => { s.textContent = '☆'; s.classList.remove('active'); });
+      showToast('Отзыв опубликован!');
+    });
+  </script>
+
+
+
+
