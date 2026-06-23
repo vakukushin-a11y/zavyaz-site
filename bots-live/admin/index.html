@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CMS — ЗАВЯЗЬ</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;background:#f5f0eb;min-height:100vh}
+.login-box{max-width:400px;margin:100px auto;background:#fff;padding:40px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.06);border-radius:4px}
+.login-box h1{font-family:'Cormorant Garamond',serif;font-size:2.2rem;margin-bottom:8px;color:#2c2c2c}
+.login-box p{color:#999;font-size:0.8rem;margin-bottom:20px}
+.login-box input{width:100%;padding:14px;border:1px solid #e0e0e0;font-size:0.9rem;outline:none;text-align:center;margin-bottom:12px;letter-spacing:2px;border-radius:3px;transition:border-color .2s}
+.login-box input:focus{border-color:#7b4b3a}
+.btn{padding:12px 28px;background:#7b4b3a;color:#fff;border:none;cursor:pointer;font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;border-radius:3px;transition:all .2s;font-weight:500}
+.btn:hover{background:#5a3427;transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-sm{padding:8px 16px;font-size:0.7rem}
+.btn-xs{padding:5px 10px;font-size:0.65rem}
+.btn-outline{background:transparent;color:#7b4b3a;border:1px solid #7b4b3a}
+.btn-outline:hover{background:#7b4b3a;color:#fff}
+.btn-del{background:#c0392b}.btn-del:hover{background:#a93226}
+.btn-green{background:#27ae60}.btn-green:hover{background:#1e8449}
+.btn-gold{background:#c9a063}.btn-gold:hover{background:#b08a4a}
+.app{display:none;max-width:800px;margin:0 auto;padding:24px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:16px;border-bottom:2px solid #7b4b3a}
+.header h1{font-family:'Cormorant Garamond',serif;font-size:2rem;color:#2c2c2c}
+.header span{font-size:0.8rem;color:#999}
+.form-box{background:#fff;padding:24px;margin-bottom:24px;box-shadow:0 2px 12px rgba(0,0,0,0.04);border-radius:6px}
+.form-box h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;margin-bottom:16px;color:#2c2c2c}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-box input,.form-box textarea{width:100%;padding:12px;border:1px solid #e0e0e0;font-family:'Montserrat',sans-serif;font-size:0.85rem;outline:none;border-radius:3px;transition:border-color .2s}
+.form-box input:focus,.form-box textarea:focus{border-color:#7b4b3a}
+.form-box textarea{resize:vertical;min-height:120px}
+.form-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.incoming-card{background:#fff;padding:16px 20px;border-left:3px solid #c9a063;border-radius:0 4px 4px 0;box-shadow:0 1px 6px rgba(0,0,0,0.03);transition:all .2s;margin-bottom:12px}
+.incoming-card:hover{box-shadow:0 2px 12px rgba(0,0,0,0.06);border-left-color:#7b4b3a}
+.incoming-card strong{display:block;font-family:'Cormorant Garamond',serif;font-size:0.95rem;margin-bottom:4px;color:#2c2c2c}
+.incoming-card .meta{font-size:0.7rem;color:#999;margin-bottom:8px}
+.incoming-card p{font-size:0.83rem;color:#444;line-height:1.5;margin-bottom:10px}
+.incoming-card .actions{display:flex;gap:6px;flex-wrap:wrap}
+.news-card{background:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 6px rgba(0,0,0,0.03);border-radius:4px;transition:all .2s;margin-bottom:10px}
+.news-card:hover{box-shadow:0 2px 12px rgba(0,0,0,0.06);transform:translateX(2px)}
+.news-card strong{display:block;font-family:'Cormorant Garamond',serif;font-size:1rem;color:#2c2c2c}
+.news-card span{font-size:0.7rem;color:#999}
+.news-card-actions{display:flex;gap:6px;flex-shrink:0}
+.toast{position:fixed;bottom:20px;right:20px;background:#7b4b3a;color:#fff;padding:14px 24px;font-size:0.85rem;opacity:0;transform:translateY(10px);transition:.3s;pointer-events:none;border-radius:4px;z-index:1000}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast.error{background:#c0392b}
+.empty{text-align:center;color:#999;padding:40px 20px;font-size:0.9rem}
+@media(max-width:768px){.form-row{grid-template-columns:1fr}.header{flex-direction:column;align-items:flex-start;gap:8px}}
+</style>
+</head>
+<body>
+
+<div class="login-box" id="loginBox">
+  <h1>ЗАВЯЗЬ</h1>
+  <p>CMS — Публикация новостей</p>
+  <input type="password" id="password" placeholder="Пароль" onkeydown="if(event.key==='Enter')login()">
+  <button class="btn" onclick="login()" style="width:100%;margin-top:8px">Войти</button>
+  <p id="loginErr" style="color:#c0392b;font-size:0.8rem;margin-top:12px;display:none">Неверный пароль</p>
+</div>
+
+<div class="app" id="app">
+  <div class="header">
+    <div><h1>ЗАВЯЗЬ CMS</h1><span>Публикация новостей</span></div>
+    <button class="btn btn-outline btn-sm" onclick="logout()">Выйти</button>
+  </div>
+
+  <div class="form-box">
+    <h3 id="formTitle">Новая публикация</h3>
+    <input type="hidden" id="editId">
+    <div class="form-row">
+      <input type="text" id="newsTitle" placeholder="Заголовок">
+      <input type="text" id="newsDate" placeholder="Дата (например: 20.06.2026)">
+    </div>
+    <textarea id="newsText" placeholder="Текст новости или анализ статьи..."></textarea>
+    <div class="form-actions">
+      <button class="btn" onclick="saveNews()">Опубликовать</button>
+      <button class="btn btn-outline btn-sm" onclick="cancelEdit()" id="cancelBtn" style="display:none">Отмена</button>
+    </div>
+  </div>
+
+  <div class="form-box" style="background:#fffbf0;border:1px solid #e8d5b0">
+    <h3 style="display:flex;justify-content:space-between;align-items:center">
+      Входящие новости
+      <button class="btn btn-gold btn-sm" onclick="fetchIncoming()" id="fetchBtn">Загрузить</button>
+    </h3>
+    <div id="incomingList"><p class="empty">Нажмите «Загрузить» для получения новостей</p></div>
+  </div>
+
+  <div class="form-box">
+    <h3>Опубликованные (<span id="newsCount">0</span>)</h3>
+    <div id="newsList"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API = "/api/cms";
+
+function getCurrentDateTime() {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  return `${day}.${month}.${year} ${hours}:${minutes}`;
+}
+
+async function check() {
+  try { const r = await fetch(API + "/check"); const d = await r.json(); if (d.ok) showApp(); } catch(e) {}
+}
+async function login() {
+  const pw = document.getElementById("password").value;
+  try {
+    const r = await fetch(API + "/login", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({ password: pw }) });
+    if (r.ok) showApp(); else document.getElementById("loginErr").style.display = "block";
+  } catch(e) { document.getElementById("loginErr").style.display = "block"; }
+}
+async function logout() { await fetch(API + "/logout", { method: "POST" }); location.reload(); }
+
+async function loadNews() {
+  try {
+    const r = await fetch(API + "/news"); const nAll = await r.json();
+    document.getElementById("newsCount").textContent = nAll.length;
+    document.getElementById("newsList").innerHTML = nAll.map(n =>
+      '<div class="news-card"><div style="flex:1"><strong>' + n.title + '</strong><span>' + n.date + (n.source ? ' • ' + n.source : '') + '</span><p style="font-size:0.8rem;color:#555;margin-top:4px;line-height:1.5">' + (n.text||"") + '</p></div><div class="news-card-actions"><button class="btn btn-outline btn-xs" onclick="editNews(' + n.id + ')">✎</button><button class="btn btn-del btn-xs" onclick="deleteNews(' + n.id + ')">✕</button></div></div>'
+    ).join("") || '<p class="empty">Нет опубликованных новостей</p>';
+  } catch(e) {}
+}
+
+async function saveNews() {
+  const title = document.getElementById("newsTitle").value.trim();
+  const text = document.getElementById("newsText").value.trim();
+  const date = document.getElementById("newsDate").value.trim();
+  const editId = document.getElementById("editId").value;
+  if (!title || !text) return toast("Заполните заголовок и текст", true);
+  try {
+    const isFromIncoming = editId.startsWith("incoming:");
+    const incomingId = isFromIncoming ? editId.replace("incoming:", "") : null;
+    const body = { title, text, date };
+    if (incomingId) body.incomingId = incomingId;
+    if (editId && !isFromIncoming) {
+      await fetch(API + "/news/" + editId, { method: "PUT", headers: {"Content-Type":"application/json"}, body: JSON.stringify(body) });
+    } else {
+      await fetch(API + "/news", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(body) });
+    }
+    cancelEdit(); loadNews(); loadIncoming(); toast("Опубликовано");
+  } catch(e) { toast("Ошибка", true); }
+}
+
+async function editNews(id) {
+  try {
+    const r = await fetch(API + "/news"); const data = await r.json();
+    const n = data.find(x => x.id === id);
+    if (n) {
+      document.getElementById("editId").value = n.id;
+      document.getElementById("newsTitle").value = n.title;
+      document.getElementById("newsText").value = n.text;
+      document.getElementById("newsDate").value = n.date || "";
+      document.getElementById("formTitle").textContent = "Редактировать публикацию";
+      document.getElementById("cancelBtn").style.display = "inline-block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  } catch(e) {}
+}
+
+function cancelEdit() {
+  document.getElementById("editId").value = "";
+  document.getElementById("newsTitle").value = "";
+  document.getElementById("newsText").value = "";
+  document.getElementById("newsDate").value = getCurrentDateTime();
+  document.getElementById("formTitle").textContent = "Новая публикация";
+  document.getElementById("cancelBtn").style.display = "none";
+}
+
+async function deleteNews(id) {
+  if (!confirm("Удалить новость?")) return;
+  try { await fetch(API + "/news/" + id, { method: "DELETE" }); loadNews(); toast("Удалено"); } catch(e) { toast("Ошибка", true); }
+}
+
+async function fetchIncoming() {
+  const btn = document.getElementById("fetchBtn"); btn.textContent = "Загрузка..."; btn.disabled = true;
+  try {
+    const r = await fetch(API + "/incoming/fetch", { method: "POST" });
+    const d = await r.json();
+    btn.textContent = "Загрузить"; btn.disabled = false;
+    loadIncoming(); toast("Загружено: " + d.count);
+  } catch(e) { btn.textContent = "Загрузить"; btn.disabled = false; toast("Ошибка загрузки", true); }
+}
+
+async function loadIncoming() {
+  try {
+    const r = await fetch(API + "/incoming"); const inAll = await r.json();
+    if (inAll.length === 0) { document.getElementById("incomingList").innerHTML = '<p class="empty">Нет входящих новостей</p>'; return; }
+    document.getElementById("incomingList").innerHTML = inAll.map(n =>
+      '<div class="incoming-card"><strong>' + n.title + '</strong><div class="meta">' + (n.source||"") + (n.date ? ' • ' + n.date : '') + '</div><p>' + (n.text||n.title||'') + '</p><div class="actions"><button class="btn btn-green btn-xs" onclick="editIncoming(' + n.id + ')">Редактировать</button><button class="btn btn-del btn-xs" onclick="deleteIncoming(' + n.id + ')">Удалить</button>' + (n.link ? '<a href="' + n.link + '" target="_blank" class="btn btn-outline btn-xs" style="text-decoration:none">Источник →</a>' : '') + '</div></div>'
+    ).join("");
+  } catch(e) {}
+}
+
+async function editIncoming(id) {
+  try {
+    const r = await fetch(API + "/incoming"); const data = await r.json();
+    const n = data.find(x => x.id == id);
+    if (n) {
+      document.getElementById("editId").value = "incoming:" + n.id;
+      document.getElementById("newsTitle").value = n.title;
+      document.getElementById("newsText").value = n.text || n.title;
+      document.getElementById("newsDate").value = n.date || getCurrentDateTime();
+      document.getElementById("formTitle").textContent = "Редактировать перед публикацией";
+      document.getElementById("cancelBtn").style.display = "inline-block";
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  } catch(e) {}
+}
+
+async function deleteIncoming(id) {
+  try { await fetch(API + "/incoming/" + id, { method: "DELETE" }); loadIncoming(); toast("Удалено"); } catch(e) {}
+}
+
+function showApp() {
+  document.getElementById("loginBox").style.display = "none";
+  document.getElementById("app").style.display = "block";
+  document.getElementById("loginErr").style.display = "none";
+  document.getElementById("newsDate").value = getCurrentDateTime();
+  loadNews();
+  loadIncoming();
+}
+
+function toast(msg, isError) {
+  const t = document.getElementById("toast"); t.textContent = msg; t.className = "toast show" + (isError ? " error" : "");
+  setTimeout(() => t.className = "toast", 2500);
+}
+
+check();
+</script>
+</body>
+</html>

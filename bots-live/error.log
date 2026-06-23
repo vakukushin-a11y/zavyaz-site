@@ -1,0 +1,17 @@
+C:\Users\va_ku\OneDrive\Трикотажный Гуру\bots-live\node_modules\openai\client.js:143
+            throw new Errors.OpenAIError('Missing credentials. Please pass an `apiKey`, `workloadIdentity`, `adminAPIKey`, or set the `OPENAI_API_KEY` or `OPENAI_ADMIN_KEY` environment variable.');
+            ^
+
+OpenAIError: Missing credentials. Please pass an `apiKey`, `workloadIdentity`, `adminAPIKey`, or set the `OPENAI_API_KEY` or `OPENAI_ADMIN_KEY` environment variable.
+    at new OpenAI (C:\Users\va_ku\OneDrive\Трикотажный Гуру\bots-live\node_modules\openai\client.js:143:19)
+    at new <anonymous> (C:\Users\va_ku\OneDrive\Трикотажный Гуру\bots-live\node_modules\openai\index.js:4:10)
+    at Object.<anonymous> (C:\Users\va_ku\OneDrive\Трикотажный Гуру\bots-live\index.js:19:16)
+    at Module._compile (node:internal/modules/cjs/loader:1873:14)
+    at Object..js (node:internal/modules/cjs/loader:2013:10)
+    at Module.load (node:internal/modules/cjs/loader:1596:32)
+    at Module._load (node:internal/modules/cjs/loader:1398:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v26.3.0
